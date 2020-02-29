@@ -10,7 +10,7 @@ public class Dog {
     private Dog() {
     }
 
-    public Dog(String color, String breed, String weight, String strength) {
+    public Dog(String color, String breed, int weight, int strength) {
         this.color = color;
         this.breed = breed;
         this.weight = weight;
@@ -33,9 +33,10 @@ public class Dog {
         this.breed = breed;
     }
 
-    public String fight(Dog dog){
-        if(this.strength > dog.strength){
+    public String fight(Dog dog) {
+        if (this.strength > dog.strength) {
             return this.breed;
         }
+        return dog.breed;
     }
 }
